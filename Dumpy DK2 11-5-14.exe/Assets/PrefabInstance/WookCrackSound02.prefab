@@ -8,15 +8,15 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1670827120215796}
+  m_RootGameObject: {fileID: 1953463881758600}
   m_IsPrefabParent: 1
---- !u!1 &1670827120215796
+--- !u!1 &1953463881758600
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4308468454021298}
-  - component: {fileID: 82364236719717442}
-  - component: {fileID: 114687138344282789}
+  - component: {fileID: 4097015417186693}
+  - component: {fileID: 82829032556059789}
+  - component: {fileID: 114493296982157884}
   m_Layer: 0
   m_Name: WookCrackSound02
   m_TagString: Untagged
@@ -24,9 +24,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4308468454021298
+--- !u!4 &4097015417186693
 Transform:
-  m_GameObject: {fileID: 1670827120215796}
+  m_GameObject: {fileID: 1953463881758600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7472057, y: -15.5, z: 3.913815}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82364236719717442
+--- !u!82 &82829032556059789
 AudioSource:
-  m_GameObject: {fileID: 1670827120215796}
+  m_GameObject: {fileID: 1953463881758600}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2c2e96ff1c323f34389c0f06ec79705a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bf5a707ffe7855946aeb457efe103216, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -111,11 +111,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114687138344282789
+--- !u!114 &114493296982157884
 MonoBehaviour:
-  m_GameObject: {fileID: 1670827120215796}
+  m_GameObject: {fileID: 1953463881758600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c357523b1489fa489f516ca13f4dd06, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d054fd683c2b934e9238c89c8835d97, type: 3}
   m_Name:
   m_EditorClassIdentifier:

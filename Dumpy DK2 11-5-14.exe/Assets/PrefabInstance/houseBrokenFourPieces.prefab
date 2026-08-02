@@ -8,14 +8,14 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1159164062707546}
+  m_RootGameObject: {fileID: 1727146258664343}
   m_IsPrefabParent: 1
---- !u!1 &1159164062707546
+--- !u!1 &1727146258664343
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4591528727493492}
-  - component: {fileID: 95046390058911793}
+  - component: {fileID: 4704081079486060}
+  - component: {fileID: 95712727379274990}
   m_Layer: 0
   m_Name: houseBrokenFourPieces
   m_TagString: Untagged
@@ -23,26 +23,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4591528727493492
+--- !u!4 &4704081079486060
 Transform:
-  m_GameObject: {fileID: 1159164062707546}
+  m_GameObject: {fileID: 1727146258664343}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 90.61967, y: 19.60252, z: 935.6254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4628923627037939}
-  - {fileID: 4257274970935431}
-  - {fileID: 4930780532190780}
-  - {fileID: 4199367723197159}
+  - {fileID: 4857065646929809}
+  - {fileID: 4443743525293426}
+  - {fileID: 4641356173655552}
+  - {fileID: 4211854227724483}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95046390058911793
+--- !u!95 &95712727379274990
 Animator:
   serializedVersion: 3
-  m_GameObject: {fileID: 1159164062707546}
+  m_GameObject: {fileID: 1727146258664343}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2f41ff63d7afd8f48aeb4aec320c2cfd, type: 2}
+  m_Avatar: {fileID: 9000000, guid: 62fee23c2101848458ac44d72ae95e22, type: 2}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -51,16 +51,16 @@ Animator:
   m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &1773524646472604
+--- !u!1 &1107826516754217
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4628923627037939}
-  - component: {fileID: 33733198195047246}
-  - component: {fileID: 23347862563066029}
-  - component: {fileID: 54444227129575131}
-  - component: {fileID: 64245569507138928}
-  - component: {fileID: 114168350683117636}
+  - component: {fileID: 4857065646929809}
+  - component: {fileID: 33212106899582950}
+  - component: {fileID: 23627226735976422}
+  - component: {fileID: 54150806016953669}
+  - component: {fileID: 64788955122485943}
+  - component: {fileID: 114270893620765045}
   m_Layer: 9
   m_Name: houseBroken1
   m_TagString: Untagged
@@ -68,23 +68,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4628923627037939
+--- !u!4 &4857065646929809
 Transform:
-  m_GameObject: {fileID: 1773524646472604}
+  m_GameObject: {fileID: 1107826516754217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591528727493492}
+  m_Father: {fileID: 4704081079486060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33733198195047246
+--- !u!33 &33212106899582950
 MeshFilter:
-  m_GameObject: {fileID: 1773524646472604}
-  m_Mesh: {fileID: 4300000, guid: 732f76095b710044183e8dab313d93e3, type: 2}
---- !u!23 &23347862563066029
+  m_GameObject: {fileID: 1107826516754217}
+  m_Mesh: {fileID: 4300000, guid: 0126c94a997db72488cc3f2f80b3c405, type: 2}
+--- !u!23 &23627226735976422
 MeshRenderer:
-  m_GameObject: {fileID: 1773524646472604}
+  m_GameObject: {fileID: 1107826516754217}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -93,8 +93,8 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aa87f99d3546aa64d9c8a142ecbab176, type: 2}
-  - {fileID: 2100000, guid: 3aa862b511f6a6a47838a9cfda11bf05, type: 2}
+  - {fileID: 2100000, guid: 11ac86941342060429e97772e4985b81, type: 2}
+  - {fileID: 2100000, guid: 2c593ce66ddfee44b849674be961d685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,9 +114,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &54444227129575131
+--- !u!54 &54150806016953669
 Rigidbody:
-  m_GameObject: {fileID: 1773524646472604}
+  m_GameObject: {fileID: 1107826516754217}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -126,9 +126,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64245569507138928
+--- !u!64 &64788955122485943
 MeshCollider:
-  m_GameObject: {fileID: 1773524646472604}
+  m_GameObject: {fileID: 1107826516754217}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -136,26 +136,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 732f76095b710044183e8dab313d93e3, type: 2}
---- !u!114 &114168350683117636
+  m_Mesh: {fileID: 4300000, guid: 0126c94a997db72488cc3f2f80b3c405, type: 2}
+--- !u!114 &114270893620765045
 MonoBehaviour:
-  m_GameObject: {fileID: 1773524646472604}
+  m_GameObject: {fileID: 1107826516754217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d769624512398440b9091e76fc69af5, type: 3}
+  m_Script: {fileID: 11500000, guid: 38730465072d0b34c85ddb66d8f8f698, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  hitParticle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
---- !u!1 &1454028650186337
+  hitParticle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
+--- !u!1 &1087967749924442
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4257274970935431}
-  - component: {fileID: 33397506893215176}
-  - component: {fileID: 23167842430481685}
-  - component: {fileID: 54893511871190485}
-  - component: {fileID: 64810024432359795}
-  - component: {fileID: 114105952029968110}
+  - component: {fileID: 4443743525293426}
+  - component: {fileID: 33949490187379822}
+  - component: {fileID: 23142440549199836}
+  - component: {fileID: 54643444352402195}
+  - component: {fileID: 64751518471012302}
+  - component: {fileID: 114413463938585437}
   m_Layer: 9
   m_Name: houseBroken3
   m_TagString: Untagged
@@ -163,23 +163,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4257274970935431
+--- !u!4 &4443743525293426
 Transform:
-  m_GameObject: {fileID: 1454028650186337}
+  m_GameObject: {fileID: 1087967749924442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591528727493492}
+  m_Father: {fileID: 4704081079486060}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33397506893215176
+--- !u!33 &33949490187379822
 MeshFilter:
-  m_GameObject: {fileID: 1454028650186337}
-  m_Mesh: {fileID: 4300000, guid: 18766691ac949a04d8bf2b8471910072, type: 2}
---- !u!23 &23167842430481685
+  m_GameObject: {fileID: 1087967749924442}
+  m_Mesh: {fileID: 4300000, guid: eeeb18087745e004da499a6890808fd5, type: 2}
+--- !u!23 &23142440549199836
 MeshRenderer:
-  m_GameObject: {fileID: 1454028650186337}
+  m_GameObject: {fileID: 1087967749924442}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -188,10 +188,10 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1623f00a52829f84ea3bf70b3829e6cd, type: 2}
-  - {fileID: 2100000, guid: 83295915a2c4ba340b818e697fa26a8b, type: 2}
-  - {fileID: 2100000, guid: aa87f99d3546aa64d9c8a142ecbab176, type: 2}
-  - {fileID: 2100000, guid: ab960e022bedb9a4f95d1a1f5b30eb18, type: 2}
+  - {fileID: 2100000, guid: 13acbe650b7d11845b572d6c981ced3f, type: 2}
+  - {fileID: 2100000, guid: d07e2025607e2194280822b2482a9022, type: 2}
+  - {fileID: 2100000, guid: 11ac86941342060429e97772e4985b81, type: 2}
+  - {fileID: 2100000, guid: 0ab6c0dd3e32ce04c93a327f032b7fe5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -211,9 +211,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &54893511871190485
+--- !u!54 &54643444352402195
 Rigidbody:
-  m_GameObject: {fileID: 1454028650186337}
+  m_GameObject: {fileID: 1087967749924442}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -223,9 +223,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64810024432359795
+--- !u!64 &64751518471012302
 MeshCollider:
-  m_GameObject: {fileID: 1454028650186337}
+  m_GameObject: {fileID: 1087967749924442}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -233,26 +233,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 18766691ac949a04d8bf2b8471910072, type: 2}
---- !u!114 &114105952029968110
+  m_Mesh: {fileID: 4300000, guid: eeeb18087745e004da499a6890808fd5, type: 2}
+--- !u!114 &114413463938585437
 MonoBehaviour:
-  m_GameObject: {fileID: 1454028650186337}
+  m_GameObject: {fileID: 1087967749924442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d769624512398440b9091e76fc69af5, type: 3}
+  m_Script: {fileID: 11500000, guid: 38730465072d0b34c85ddb66d8f8f698, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  hitParticle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
---- !u!1 &1845232452173084
+  hitParticle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
+--- !u!1 &1546154209956498
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4930780532190780}
-  - component: {fileID: 33098455380281567}
-  - component: {fileID: 23525398202479757}
-  - component: {fileID: 54896721996937450}
-  - component: {fileID: 64234578050601124}
-  - component: {fileID: 114680751287141975}
+  - component: {fileID: 4641356173655552}
+  - component: {fileID: 33089868262761612}
+  - component: {fileID: 23226986387165620}
+  - component: {fileID: 54816264403472714}
+  - component: {fileID: 64932673043681302}
+  - component: {fileID: 114790967984831842}
   m_Layer: 9
   m_Name: houseBroken4
   m_TagString: Untagged
@@ -260,23 +260,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4930780532190780
+--- !u!4 &4641356173655552
 Transform:
-  m_GameObject: {fileID: 1845232452173084}
+  m_GameObject: {fileID: 1546154209956498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591528727493492}
+  m_Father: {fileID: 4704081079486060}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33098455380281567
+--- !u!33 &33089868262761612
 MeshFilter:
-  m_GameObject: {fileID: 1845232452173084}
-  m_Mesh: {fileID: 4300000, guid: cfe15d5987dbfc740ae33e69e9bbc354, type: 2}
---- !u!23 &23525398202479757
+  m_GameObject: {fileID: 1546154209956498}
+  m_Mesh: {fileID: 4300000, guid: 1ba51e3a793ca1448a75fd4da261f0c1, type: 2}
+--- !u!23 &23226986387165620
 MeshRenderer:
-  m_GameObject: {fileID: 1845232452173084}
+  m_GameObject: {fileID: 1546154209956498}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -285,8 +285,8 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 83295915a2c4ba340b818e697fa26a8b, type: 2}
-  - {fileID: 2100000, guid: 1623f00a52829f84ea3bf70b3829e6cd, type: 2}
+  - {fileID: 2100000, guid: d07e2025607e2194280822b2482a9022, type: 2}
+  - {fileID: 2100000, guid: 13acbe650b7d11845b572d6c981ced3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,9 +306,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &54896721996937450
+--- !u!54 &54816264403472714
 Rigidbody:
-  m_GameObject: {fileID: 1845232452173084}
+  m_GameObject: {fileID: 1546154209956498}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -318,9 +318,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64234578050601124
+--- !u!64 &64932673043681302
 MeshCollider:
-  m_GameObject: {fileID: 1845232452173084}
+  m_GameObject: {fileID: 1546154209956498}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -328,26 +328,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: cfe15d5987dbfc740ae33e69e9bbc354, type: 2}
---- !u!114 &114680751287141975
+  m_Mesh: {fileID: 4300000, guid: 1ba51e3a793ca1448a75fd4da261f0c1, type: 2}
+--- !u!114 &114790967984831842
 MonoBehaviour:
-  m_GameObject: {fileID: 1845232452173084}
+  m_GameObject: {fileID: 1546154209956498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d769624512398440b9091e76fc69af5, type: 3}
+  m_Script: {fileID: 11500000, guid: 38730465072d0b34c85ddb66d8f8f698, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  hitParticle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
---- !u!1 &1974941962753982
+  hitParticle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
+--- !u!1 &1836234843684742
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4199367723197159}
-  - component: {fileID: 33261260670570951}
-  - component: {fileID: 23530850650502362}
-  - component: {fileID: 54272486557539911}
-  - component: {fileID: 64522935373319018}
-  - component: {fileID: 114581915110776008}
+  - component: {fileID: 4211854227724483}
+  - component: {fileID: 33261237417897747}
+  - component: {fileID: 23371123669650630}
+  - component: {fileID: 54976248831080569}
+  - component: {fileID: 64834336900094062}
+  - component: {fileID: 114588995807404560}
   m_Layer: 9
   m_Name: houseBroken5
   m_TagString: Untagged
@@ -355,23 +355,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4199367723197159
+--- !u!4 &4211854227724483
 Transform:
-  m_GameObject: {fileID: 1974941962753982}
+  m_GameObject: {fileID: 1836234843684742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4591528727493492}
+  m_Father: {fileID: 4704081079486060}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33261260670570951
+--- !u!33 &33261237417897747
 MeshFilter:
-  m_GameObject: {fileID: 1974941962753982}
-  m_Mesh: {fileID: 4300000, guid: 88e669e61fd883345a5d25ed8fbd6562, type: 2}
---- !u!23 &23530850650502362
+  m_GameObject: {fileID: 1836234843684742}
+  m_Mesh: {fileID: 4300000, guid: f890a0d490bc3934ba1d3ef194b3c202, type: 2}
+--- !u!23 &23371123669650630
 MeshRenderer:
-  m_GameObject: {fileID: 1974941962753982}
+  m_GameObject: {fileID: 1836234843684742}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -380,7 +380,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3aa862b511f6a6a47838a9cfda11bf05, type: 2}
+  - {fileID: 2100000, guid: 2c593ce66ddfee44b849674be961d685, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -400,9 +400,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &54272486557539911
+--- !u!54 &54976248831080569
 Rigidbody:
-  m_GameObject: {fileID: 1974941962753982}
+  m_GameObject: {fileID: 1836234843684742}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -412,9 +412,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64522935373319018
+--- !u!64 &64834336900094062
 MeshCollider:
-  m_GameObject: {fileID: 1974941962753982}
+  m_GameObject: {fileID: 1836234843684742}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -422,13 +422,13 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 88e669e61fd883345a5d25ed8fbd6562, type: 2}
---- !u!114 &114581915110776008
+  m_Mesh: {fileID: 4300000, guid: f890a0d490bc3934ba1d3ef194b3c202, type: 2}
+--- !u!114 &114588995807404560
 MonoBehaviour:
-  m_GameObject: {fileID: 1974941962753982}
+  m_GameObject: {fileID: 1836234843684742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d769624512398440b9091e76fc69af5, type: 3}
+  m_Script: {fileID: 11500000, guid: 38730465072d0b34c85ddb66d8f8f698, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  hitParticle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
+  hitParticle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}

@@ -8,19 +8,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1054602476154261}
+  m_RootGameObject: {fileID: 1660193222353313}
   m_IsPrefabParent: 1
---- !u!1 &1054602476154261
+--- !u!1 &1660193222353313
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4757841022358208}
-  - component: {fileID: 33040492944952109}
-  - component: {fileID: 23191022321984559}
-  - component: {fileID: 95855042635570698}
-  - component: {fileID: 54697085392753096}
-  - component: {fileID: 114407801098142057}
-  - component: {fileID: 65738442408223685}
+  - component: {fileID: 4513231316387483}
+  - component: {fileID: 33773804833781033}
+  - component: {fileID: 23453059169942628}
+  - component: {fileID: 95612799059205320}
+  - component: {fileID: 54145622837784372}
+  - component: {fileID: 114966415624867629}
+  - component: {fileID: 65128300653541475}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -28,9 +28,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4757841022358208
+--- !u!4 &4513231316387483
 Transform:
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.93276, y: -15.5, z: 77.82518}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,13 +38,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &33040492944952109
+--- !u!33 &33773804833781033
 MeshFilter:
-  m_GameObject: {fileID: 1054602476154261}
-  m_Mesh: {fileID: 4300000, guid: 6b4e82e21bd9bd549a714f17c605ca2c, type: 2}
---- !u!23 &23191022321984559
+  m_GameObject: {fileID: 1660193222353313}
+  m_Mesh: {fileID: 4300000, guid: 862875722cf76594cb4b7a8af51de21a, type: 2}
+--- !u!23 &23453059169942628
 MeshRenderer:
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -53,8 +53,8 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8df0ac3a12efd124bbcb5648c8acba5b, type: 2}
-  - {fileID: 2100000, guid: f3d3ac40fe2f99a4283b7bcfd3afbb8a, type: 2}
+  - {fileID: 2100000, guid: 29a87b8217fcd6c4e9ca3b68ed8f0b83, type: 2}
+  - {fileID: 2100000, guid: e6184c8cd7b92e542b5384d72ae9c522, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,10 +74,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!95 &95855042635570698
+--- !u!95 &95612799059205320
 Animator:
   serializedVersion: 3
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -88,9 +88,9 @@ Animator:
   m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!54 &54697085392753096
+--- !u!54 &54145622837784372
 Rigidbody:
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,20 +100,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114407801098142057
+--- !u!114 &114966415624867629
 MonoBehaviour:
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f28805716077e42ad8c3319026cff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 27c68ac05fb10f142aaa282cdc9b610e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  brokenObj: {fileID: 1258303542050390, guid: 16e5d2af7958fb244910557bbc6ffa20, type: 2}
-  particle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
+  brokenObj: {fileID: 1389180267670342, guid: 4be7d972b58a2b84892eeb4e7883150f, type: 2}
+  particle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
   strength: 100
---- !u!65 &65738442408223685
+--- !u!65 &65128300653541475
 BoxCollider:
-  m_GameObject: {fileID: 1054602476154261}
+  m_GameObject: {fileID: 1660193222353313}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1

@@ -8,19 +8,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1081863044446801}
+  m_RootGameObject: {fileID: 1129438511200807}
   m_IsPrefabParent: 1
---- !u!1 &1081863044446801
+--- !u!1 &1129438511200807
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4244567597791514}
-  - component: {fileID: 33289328098188707}
-  - component: {fileID: 23274411213138628}
-  - component: {fileID: 95787335967360539}
-  - component: {fileID: 54663796692316911}
-  - component: {fileID: 64543069959986249}
-  - component: {fileID: 114714035550197811}
+  - component: {fileID: 4190687336694081}
+  - component: {fileID: 33369501143145875}
+  - component: {fileID: 23028982022022642}
+  - component: {fileID: 95320524503899515}
+  - component: {fileID: 54016172334022131}
+  - component: {fileID: 64124474484253548}
+  - component: {fileID: 114995716266975373}
   m_Layer: 0
   m_Name: Joliet_Sign_Whole
   m_TagString: Untagged
@@ -28,9 +28,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4244567597791514
+--- !u!4 &4190687336694081
 Transform:
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   m_LocalRotation: {x: 0, y: -0.8859611, z: 0, w: 0.4637596}
   m_LocalPosition: {x: 9.761602, y: -16.02885, z: 19.68795}
   m_LocalScale: {x: 476.8878, y: 476.8878, z: 476.8878}
@@ -38,13 +38,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 55.25994, z: 180}
---- !u!33 &33289328098188707
+--- !u!33 &33369501143145875
 MeshFilter:
-  m_GameObject: {fileID: 1081863044446801}
-  m_Mesh: {fileID: 4300000, guid: ff12f0e8c8ae5c64c8e5457447019a4a, type: 2}
---- !u!23 &23274411213138628
+  m_GameObject: {fileID: 1129438511200807}
+  m_Mesh: {fileID: 4300000, guid: ab020e409168e134a8ebaed254856701, type: 2}
+--- !u!23 &23028982022022642
 MeshRenderer:
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -53,8 +53,8 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bbe080e69c2ab7d4f87d6d7ba0235efb, type: 2}
-  - {fileID: 2100000, guid: 504f4fa6c2ef93640b0a69b3c8e829fb, type: 2}
+  - {fileID: 2100000, guid: 1dc2244ae7191604985cef82a9d890c8, type: 2}
+  - {fileID: 2100000, guid: 11b191343aaf6a8479f407634facfb79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,10 +74,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!95 &95787335967360539
+--- !u!95 &95320524503899515
 Animator:
   serializedVersion: 3
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -88,9 +88,9 @@ Animator:
   m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!54 &54663796692316911
+--- !u!54 &54016172334022131
 Rigidbody:
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,9 +100,9 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64543069959986249
+--- !u!64 &64124474484253548
 MeshCollider:
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -110,15 +110,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: ff12f0e8c8ae5c64c8e5457447019a4a, type: 2}
---- !u!114 &114714035550197811
+  m_Mesh: {fileID: 4300000, guid: ab020e409168e134a8ebaed254856701, type: 2}
+--- !u!114 &114995716266975373
 MonoBehaviour:
-  m_GameObject: {fileID: 1081863044446801}
+  m_GameObject: {fileID: 1129438511200807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f28805716077e42ad8c3319026cff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 27c68ac05fb10f142aaa282cdc9b610e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  brokenObj: {fileID: 1887239629744860, guid: c47a728ebf4f17045940ff9b1519e8d7, type: 2}
-  particle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
+  brokenObj: {fileID: 1597448166080693, guid: be7c96234c476b94fb77b4b588b853f6, type: 2}
+  particle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
   strength: 50

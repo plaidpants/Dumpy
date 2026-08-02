@@ -8,15 +8,15 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1687053310585143}
+  m_RootGameObject: {fileID: 1976779918481827}
   m_IsPrefabParent: 1
---- !u!1 &1687053310585143
+--- !u!1 &1976779918481827
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4966022666768645}
-  - component: {fileID: 82591495502337332}
-  - component: {fileID: 114452030523151903}
+  - component: {fileID: 4484042442592776}
+  - component: {fileID: 82913293706402100}
+  - component: {fileID: 114591086747606536}
   m_Layer: 0
   m_Name: BodySound01
   m_TagString: Untagged
@@ -24,9 +24,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4966022666768645
+--- !u!4 &4484042442592776
 Transform:
-  m_GameObject: {fileID: 1687053310585143}
+  m_GameObject: {fileID: 1976779918481827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.7472057, y: -15.5, z: 3.913815}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82591495502337332
+--- !u!82 &82913293706402100
 AudioSource:
-  m_GameObject: {fileID: 1687053310585143}
+  m_GameObject: {fileID: 1976779918481827}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d67e7d12b1ac764bb2b111159bf0bc5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7f7fec30261e18f4886b68a2c1d3d5fd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
@@ -111,11 +111,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114452030523151903
+--- !u!114 &114591086747606536
 MonoBehaviour:
-  m_GameObject: {fileID: 1687053310585143}
+  m_GameObject: {fileID: 1976779918481827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c357523b1489fa489f516ca13f4dd06, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d054fd683c2b934e9238c89c8835d97, type: 3}
   m_Name:
   m_EditorClassIdentifier:

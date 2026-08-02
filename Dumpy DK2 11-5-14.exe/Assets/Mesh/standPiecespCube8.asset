@@ -3,10 +3,11 @@
 --- !u!43 &4300000
 Mesh:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: standPiecespCube8
-  serializedVersion: 8
+  serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
@@ -36,15 +37,17 @@ Mesh:
   m_BindPose: []
   m_BoneNameHashes: 
   m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
   m_IndexBuffer: 00000100020003000400050006000700080009000a000b000c000d000e000d000f000e00100011001200110013001200
-  m_Skin: []
   m_VertexData:
-    m_CurrentChannels: 139
+    serializedVersion: 3
     m_VertexCount: 20
     m_Channels:
     - stream: 0
@@ -55,6 +58,10 @@ Mesh:
       offset: 12
       format: 0
       dimension: 3
+    - stream: 0
+      offset: 32
+      format: 0
+      dimension: 4
     - stream: 0
       offset: 0
       format: 0
@@ -76,9 +83,29 @@ Mesh:
       format: 0
       dimension: 0
     - stream: 0
-      offset: 32
+      offset: 0
       format: 0
-      dimension: 4
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
     m_DataSize: 960
     _typelessdata: da88f5bfbbe71bc0e0f371c0dcb98bbeec78f53e3c8555bff8cf293f0000803fa44e73bf9f4032b2dd379f3e000080bfda88f5bfbbe71b4080de7abfdcb98bbeec78f53e3c8555bf165f523f00000000a44e73bf9f4032b2dd379f3e000080bfda88f53fbbe71b40200e0fc0dcb98bbeec78f53e3c8555bf3d09b33d5d49ba24a44e73bf9f4032b2dd379f3e000080bfda88f5bfbbe71b40e0f37140a07cd73e45517dbeaa6b5f3f0000000075a54b256c96663f524f89323b66debe000080bfda88f5bfbbe71bc0a0911940a07cd73e45517dbeaa6b5f3f7252f43d0000803f6c96663f524f89323b66debe000080bf68bdc2bebbe71b40e07c4240a07cd73e45517dbeaa6b5f3fa6d9ad3e000000006c96663f524f89323b66debe000080bf68bdc2bebbe71b40e07c424024115e3f5798a5be9790c13efc80a03b6c1db1252e8fcc3ec3a71bb02cae6abf000080bfda88f5bfbbe71bc0a091194024115e3f5798a5be9790c13e00000000b01e1e3f3f13a63e7e8a55be62336cbf000080bfda88f53fbbe71b40200e0fc024115e3f5798a5be9790c13e0000803f000000006489a33ef1df61be23ed6bbf000080bfda88f5bfbbe71bc0a0911940c120493fbc601ebf0000000000000000b01e1e3f0e9269bcf94e94bc99ee7fbf000080bfda88f5bfbbe71bc0e0f371c0c120493fbc601ebf00000000c7da7a3f4d3cd83ecc4e73bec47d9abedd5d6cbf000080bfda88f53fbbe71b40200e0fc0c120493fbc601ebf000000000000803f0000000052cac4bcace8f9bc94ce7fbf000080bfda88f53fbbe71b40200e0fc0000000000000803f00000000d34f5d3f0100803f0000803f0000000000000000000080bfda88f5bfbbe71b4080de7abf000000000000803f000000003022413f0100803f0000803f0000000000000000000080bf68bdc2bebbe71b40e07c4240000000000000803f00000000d7d6cd3e0100803f0000803f0000000000000000000080bfda88f5bfbbe71b40e0f37140000000000000803f00000000ee8aac3e0100803f0000803f0000000000000000000080bfda88f5bfbbe71b40e0f37140000080bf0000000000000000ee8aac3e0100803f0000000000000000000080bf000080bfda88f5bfbbe71b4080de7abf000080bf00000000000000003022413f0100803f0000000000000000000080bf000080bfda88f5bfbbe71bc0a0911940000080bf00000000000000002b8bea3e000000000000000000000000000080bf000080bfda88f5bfbbe71bc0e0f371c0000080bf00000000000000000000803f000000000000000000000000000080bf000080bf
   m_CompressedMesh:
@@ -137,6 +164,14 @@ Mesh:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1.918239, y: 2.436019, z: 3.78051}
   m_MeshUsageFlags: 2
+  m_CookingOptions: 30
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
-  m_MeshOptimized: 1
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: -1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 

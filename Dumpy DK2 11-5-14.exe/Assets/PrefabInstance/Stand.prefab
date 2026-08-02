@@ -8,19 +8,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1579572258914474}
+  m_RootGameObject: {fileID: 1723103996375725}
   m_IsPrefabParent: 1
---- !u!1 &1579572258914474
+--- !u!1 &1723103996375725
 GameObject:
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4493050025704204}
-  - component: {fileID: 33907080242935892}
-  - component: {fileID: 23194602964959342}
-  - component: {fileID: 95723996152101175}
-  - component: {fileID: 54190740835990870}
-  - component: {fileID: 114610572411252038}
-  - component: {fileID: 64681761566149380}
+  - component: {fileID: 4988027219297728}
+  - component: {fileID: 33309003656511122}
+  - component: {fileID: 23781091051159597}
+  - component: {fileID: 95430773977789077}
+  - component: {fileID: 54359199822253594}
+  - component: {fileID: 114660873108786123}
+  - component: {fileID: 64812423137315572}
   m_Layer: 0
   m_Name: Stand
   m_TagString: Untagged
@@ -28,9 +28,9 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4493050025704204
+--- !u!4 &4988027219297728
 Transform:
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   m_LocalRotation: {x: 0, y: -2.680748E-05, z: 0, w: -1}
   m_LocalPosition: {x: -6.23391, y: -15.68545, z: 20.32822}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
@@ -38,13 +38,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -0.003071911, z: 0}
---- !u!33 &33907080242935892
+--- !u!33 &33309003656511122
 MeshFilter:
-  m_GameObject: {fileID: 1579572258914474}
-  m_Mesh: {fileID: 4300000, guid: 2758f3bc82fa3264facde43de8037649, type: 2}
---- !u!23 &23194602964959342
+  m_GameObject: {fileID: 1723103996375725}
+  m_Mesh: {fileID: 4300000, guid: b2a15c6cdab3aac4e9724e68e73b0e41, type: 2}
+--- !u!23 &23781091051159597
 MeshRenderer:
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -53,8 +53,8 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fce75d6393482804681920098d7c6d5c, type: 2}
-  - {fileID: 2100000, guid: 7fe228d429a1dc0479978db93da263ca, type: 2}
+  - {fileID: 2100000, guid: d9cd51011041eeb4db580283b1de9b20, type: 2}
+  - {fileID: 2100000, guid: 4eec7136e50533641bfef39f5477d539, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -74,10 +74,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!95 &95723996152101175
+--- !u!95 &95430773977789077
 Animator:
   serializedVersion: 3
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -88,9 +88,9 @@ Animator:
   m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!54 &54190740835990870
+--- !u!54 &54359199822253594
 Rigidbody:
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   serializedVersion: 2
   m_Mass: 2
   m_Drag: 0
@@ -100,20 +100,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114610572411252038
+--- !u!114 &114660873108786123
 MonoBehaviour:
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f28805716077e42ad8c3319026cff4, type: 3}
+  m_Script: {fileID: 11500000, guid: 27c68ac05fb10f142aaa282cdc9b610e, type: 3}
   m_Name:
   m_EditorClassIdentifier:
-  brokenObj: {fileID: 1140892035502536, guid: 8e1ca14d505e80945a10e61cf8a4e533, type: 2}
-  particle: {fileID: 1063977699854620, guid: 67870c73b8d4a754ea02fb74f99bcafd, type: 2}
+  brokenObj: {fileID: 1500814419616113, guid: e1ccb5977a31a8047b6b52fdabaa7bea, type: 2}
+  particle: {fileID: 1036087489585333, guid: 121bad4dda836844ca12bc1411e2626d, type: 2}
   strength: 25
---- !u!64 &64681761566149380
+--- !u!64 &64812423137315572
 MeshCollider:
-  m_GameObject: {fileID: 1579572258914474}
+  m_GameObject: {fileID: 1723103996375725}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -121,4 +121,4 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 2758f3bc82fa3264facde43de8037649, type: 2}
+  m_Mesh: {fileID: 4300000, guid: b2a15c6cdab3aac4e9724e68e73b0e41, type: 2}
