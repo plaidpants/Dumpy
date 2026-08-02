@@ -2,7 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
-  m_Name: polySurface2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: polySurface2_2
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -23,14 +26,14 @@ Mesh:
   m_BindPose:
   - e00: -0.01510608
     e01: -0.9998859
-    e02: -2.987581E-16
+    e02: -2.987581e-16
     e03: 5.203591
     e10: -0.9998859
     e11: 0.01510608
-    e12: 5.73256E-16
+    e12: 5.73256e-16
     e13: 1.042158
-    e20: -1.214866E-16
-    e21: 6.566637E-17
+    e20: -1.214866e-16
+    e21: 6.566637e-17
     e22: -4.680991
     e23: 3.865244
     e30: 0
@@ -473,57 +476,57 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0.9713137, y: 4.960351, z: 0.8257321}
     m_Extent: {x: 0.5907307, y: 0.562911, z: 0.2153704}
   m_MeshUsageFlags: 1
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 1

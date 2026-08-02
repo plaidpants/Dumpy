@@ -2,7 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!74 &7400000
 AnimationClip:
-  m_Name: Take 001
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Take 001_3
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -35,20 +38,20 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: -5.298628, y: 1.176532E-15, z: 0}
+        value: {x: -5.298628, y: 1.176532e-15, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: -6.542062E-05, y: 1.972152E-29, z: 0}
+        outSlope: {x: -0.00006542062, y: 1.972152e-29, z: 0}
         tangentMode: 1
       - serializedVersion: 2
         time: 1
-        value: {x: -3.680673, y: 1.176532E-15, z: 0}
-        inSlope: {x: -0.3896493, y: 8.452066E-30, z: 0}
-        outSlope: {x: -0.3896201, y: 1.972154E-29, z: 0}
+        value: {x: -3.680673, y: 1.176532e-15, z: 0}
+        inSlope: {x: -0.3896493, y: 8.452066e-30, z: 0}
+        outSlope: {x: -0.3896201, y: 1.972154e-29, z: 0}
         tangentMode: 1
       - serializedVersion: 2
         time: 1.958333
-        value: {x: -5.298628, y: 1.176532E-15, z: 0}
-        inSlope: {x: 1.442951E-05, y: 8.452091E-30, z: 0}
+        value: {x: -5.298628, y: 1.176532e-15, z: 0}
+        inSlope: {x: 0.00001442951, y: 8.452091e-30, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 1
       m_PreInfinity: 2
@@ -84,22 +87,25 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 2195125531
+    - serializedVersion: 2
+      path: 2195125531
       attribute: 1
       script: {fileID: 0}
-      classID: 4
+      typeID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 2195125531
+    - serializedVersion: 2
+      path: 2195125531
       attribute: 2
       script: {fileID: 0}
-      classID: 4
+      typeID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 2195125531
+    - serializedVersion: 2
+      path: 2195125531
       attribute: 3
       script: {fileID: 0}
-      classID: 4
+      typeID: 4
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []

@@ -2,7 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!43 &4300000
 Mesh:
-  m_Name: pCube6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: pCube6_0
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -22,17 +25,17 @@ Mesh:
     fullWeights: []
   m_BindPose:
   - e00: 1
-    e01: 2.220446E-16
-    e02: -1.035425E-16
+    e01: 2.220446e-16
+    e02: -1.035425e-16
     e03: -0.4097444
-    e10: -2.220446E-16
+    e10: -2.220446e-16
     e11: 1
-    e12: -5.70694E-17
+    e12: -5.70694e-17
     e13: -0.1964834
-    e20: 1.035425E-16
-    e21: 5.70694E-17
+    e20: 1.035425e-16
+    e21: 5.70694e-17
     e22: 1
-    e23: -5.363916E-17
+    e23: -5.363916e-17
     e30: 0
     e31: 0
     e32: 0
@@ -281,57 +284,57 @@ Mesh:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UV:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Normals:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Tangents:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Weights:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_NormalSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_TangentSigns:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_FloatColors:
       m_NumItems: 0
       m_Range: 0
       m_Start: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_BoneIndices:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_Triangles:
       m_NumItems: 0
-      m_Data:
+      m_Data: 
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
     m_Center: {x: 0.4148057, y: 0.2288619, z: 0.1531327}
     m_Extent: {x: 0.3027445, y: 0.2106447, z: 0.4426094}
   m_MeshUsageFlags: 1
-  m_BakedConvexCollisionMesh:
-  m_BakedTriangleCollisionMesh:
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 1
