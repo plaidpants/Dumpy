@@ -1,5 +1,2 @@
 using UnityEngine;
-
-public class OVRVisionGuide : MonoBehaviour
-{
-}
+public class OVRVisionGuide : MonoBehaviour {}

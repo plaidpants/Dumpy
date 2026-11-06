@@ -1,5 +1,2 @@
 using UnityEngine;
-
-public class OVRGamepadController : MonoBehaviour
-{
-}
+public class OVRGamepadController : MonoBehaviour {}

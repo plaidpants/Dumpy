@@ -1,3 +1,2 @@
-public class OVRTracker
-{
-}
+using UnityEngine;
+public class OVRTracker {}

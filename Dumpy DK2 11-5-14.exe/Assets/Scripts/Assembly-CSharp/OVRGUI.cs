@@ -1,3 +1,2 @@
-public class OVRGUI
-{
-}
+using UnityEngine;
+public class OVRGUI : MonoBehaviour {}

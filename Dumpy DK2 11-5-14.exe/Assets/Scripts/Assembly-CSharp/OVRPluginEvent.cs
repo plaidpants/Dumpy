@@ -1,3 +1,2 @@
-public class OVRPluginEvent
-{
-}
+using UnityEngine;
+public class OVRPluginEvent {}

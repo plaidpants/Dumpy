@@ -2,5 +2,10 @@ using UnityEngine;
 
 public class Sun : MonoBehaviour
 {
-	public float speed;
+	public float speed = 1f;
+
+	private void Update()
+	{
+		transform.Rotate(0f, speed * Time.deltaTime, 0f);
+	}
 }

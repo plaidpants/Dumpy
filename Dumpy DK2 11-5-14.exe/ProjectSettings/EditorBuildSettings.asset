@@ -2,14 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1045 &1
 EditorBuildSettings:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Title.unity
+    path: Assets/Scene/Scenes/Title.unity
     guid: 81fae03b2ecc38a458a7be59b81f3c73
   - enabled: 1
-    path: Assets/Scenes/Main_03.unity
+    path: Assets/Scene/Scenes/Main_03.unity
     guid: 0b200af03eaecd741bc07c0cd9df04f1
   - enabled: 1
-    path: Assets/Scenes/Creddits.unity
+    path: Assets/Scene/Scenes/Creddits.unity
     guid: 882833d526226e6488801c2616393398
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 15c2d26611a5ca64ba5e662ce9dec0bb,
+      type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d4d168f19e888b149a51a15a36869fab,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8b2a8915bf3491d40bb15f984f1ede30,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f3a56a709b066484fa14082ad075e42d,
+      type: 2}

@@ -1,3 +1,2 @@
-public class OVRDisplay
-{
-}
+using UnityEngine;
+public class OVRDisplay {}
