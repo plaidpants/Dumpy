@@ -1,0 +1,1 @@
+Attempt to get the VR classic Dumpy: Going Elephants!, the 2nd Place Winner from the 2013 Indiecade VR Jam working again on modern VR hardware such as the Quest. Used uTinyRipper to extract the project files and then upgraded the project to Unity 2022
