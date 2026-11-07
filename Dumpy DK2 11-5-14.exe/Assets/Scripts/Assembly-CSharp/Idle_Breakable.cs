@@ -6,9 +6,19 @@ public class Idle_Breakable : MonoBehaviour
 	private Rigidbody rigidBody;
 	public bool isBuilding;
 
-	private void Start()
+	private void Awake()
 	{
 		rigidBody = GetComponent<Rigidbody>();
+		MeshCollider mc = GetComponent<MeshCollider>();
+		if (rigidBody != null && mc != null && !mc.convex)
+		{
+			rigidBody.isKinematic = true;
+		}
+	}
+
+	private void Start()
+	{
+		if (rigidBody == null) rigidBody = GetComponent<Rigidbody>();
 		if (rigidBody != null)
 		{
 			rigidBody.useGravity = false;
@@ -26,7 +36,12 @@ public class Idle_Breakable : MonoBehaviour
 			}
 			if (rigidBody != null)
 			{
-				rigidBody.useGravity = true;
+				MeshCollider mc = GetComponent<MeshCollider>();
+				if (mc == null || mc.convex)
+				{
+					rigidBody.isKinematic = false;
+					rigidBody.useGravity = true;
+				}
 			}
 		}
 		else
@@ -36,7 +51,12 @@ public class Idle_Breakable : MonoBehaviour
 			{
 				if (rigidBody != null)
 				{
-					rigidBody.useGravity = true;
+					MeshCollider mc = GetComponent<MeshCollider>();
+					if (mc == null || mc.convex)
+					{
+						rigidBody.isKinematic = false;
+						rigidBody.useGravity = true;
+					}
 				}
 			}
 		}

@@ -12,6 +12,7 @@ public class AndroidAudioFocusRequester : MonoBehaviour
             return;
         }
         instance = this;
+        transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
     }
 

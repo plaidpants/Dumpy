@@ -55,6 +55,13 @@ public class Plane : MonoBehaviour
 			{
 				GameObject gameObject = Instantiate(brokenObj, transform.position, transform.rotation) as GameObject;
 				gameObject.transform.localScale = transform.localScale;
+				foreach (MeshCollider mc in gameObject.GetComponentsInChildren<MeshCollider>(true))
+				{
+					if (mc != null && mc.GetComponent<Rigidbody>() != null)
+					{
+						mc.convex = true;
+					}
+				}
 				Destroy(base.gameObject);
 			}
 		}

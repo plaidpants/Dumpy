@@ -23,4 +23,12 @@ public class OVRManager : MonoBehaviour
 		}
 		instance = this;
 	}
+
+	private void OnDestroy()
+	{
+		if (instance == this)
+		{
+			instance = null;
+		}
+	}
 }

@@ -7,49 +7,95 @@ using UnityEngine.XR;
 
 public class Creddits : MonoBehaviour
 {
-	private float minDisplayTime = 1.0f; // Brief grace period so releasing a button from gameplay doesn't immediately skip
+	private float minDisplayTime = 2.5f; // Grace period before accepting restart input
 	private float timer = 0f;
+	private bool prevLegacyButtonPressed = false;
 
 	private void Update()
 	{
 		timer += Time.deltaTime;
-		if (timer < minDisplayTime) return;
 
 		bool buttonPressed = false;
+		bool anyLegacyButtonDown = false;
 
-		// 1. Any button on any New Input System device (XR controllers, Gamepad, Keyboard, Mouse, Touch)
+		// 1. New Input System: Handheld controllers, gamepads, keyboard, mouse
 		foreach (var device in UnityEngine.InputSystem.InputSystem.devices)
 		{
-			foreach (var control in device.allControls)
+			// Explicitly ignore HMD and head trackers so head motion or userPresence never auto-triggers restart
+			if (device is UnityEngine.InputSystem.XR.XRHMD) continue;
+			if (device.description.deviceClass == "HMD") continue;
+
+			if (device is UnityEngine.InputSystem.XR.XRController xrCtrl)
 			{
-				if (control is ButtonControl button && button.wasPressedThisFrame)
+				// Check discrete action buttons only (ignore capacitive touch / proximity controls)
+				string[] actionButtonNames = { "primaryButton", "secondaryButton", "menuButton", "thumbstickClicked", "primary2DAxisClick", "triggerButton" };
+				foreach (var btnName in actionButtonNames)
 				{
-					buttonPressed = true;
-					break;
+					if (xrCtrl.TryGetChildControl<ButtonControl>(btnName) is ButtonControl btn && btn.wasPressedThisFrame)
+					{
+						buttonPressed = true;
+						break;
+					}
 				}
 			}
+			else if (device is Gamepad gamepad)
+			{
+				if (gamepad.buttonSouth.wasPressedThisFrame ||
+				    gamepad.buttonEast.wasPressedThisFrame ||
+				    gamepad.buttonWest.wasPressedThisFrame ||
+				    gamepad.buttonNorth.wasPressedThisFrame ||
+				    gamepad.startButton.wasPressedThisFrame)
+				{
+					buttonPressed = true;
+				}
+			}
+			else if (device is Keyboard keyboard)
+			{
+				if (keyboard.spaceKey.wasPressedThisFrame ||
+				    keyboard.enterKey.wasPressedThisFrame ||
+				    keyboard.anyKey.wasPressedThisFrame)
+				{
+					buttonPressed = true;
+				}
+			}
+			else if (device is Mouse mouse)
+			{
+				if (mouse.leftButton.wasPressedThisFrame || mouse.rightButton.wasPressedThisFrame)
+				{
+					buttonPressed = true;
+				}
+			}
+
 			if (buttonPressed) break;
 		}
 
-		// 2. Legacy XR.InputDevices fallback for OpenXR controller buttons
-		if (!buttonPressed)
+		// 2. Legacy XR.InputDevices fallback strictly for handheld controllers
+		var xrDevices = new List<UnityEngine.XR.InputDevice>();
+		UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(
+			InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.HeldInHand, xrDevices);
+		foreach (var dev in xrDevices)
 		{
-			var xrDevices = new List<UnityEngine.XR.InputDevice>();
-			UnityEngine.XR.InputDevices.GetDevicesWithCharacteristics(
-				InputDeviceCharacteristics.Controller | InputDeviceCharacteristics.HeldInHand, xrDevices);
-			foreach (var dev in xrDevices)
-			{
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out bool p1) && p1) { buttonPressed = true; break; }
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryButton, out bool p2) && p2) { buttonPressed = true; break; }
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool tr) && tr) { buttonPressed = true; break; }
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out bool gr) && gr) { buttonPressed = true; break; }
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool mb) && mb) { buttonPressed = true; break; }
-				if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxisClick, out bool js) && js) { buttonPressed = true; break; }
-			}
+			if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out bool p1) && p1) anyLegacyButtonDown = true;
+			if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.secondaryButton, out bool p2) && p2) anyLegacyButtonDown = true;
+			if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.menuButton, out bool mb) && mb) anyLegacyButtonDown = true;
+			if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primary2DAxisClick, out bool js) && js) anyLegacyButtonDown = true;
+			if (dev.TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool tr) && tr) anyLegacyButtonDown = true;
 		}
 
-		if (buttonPressed)
+		// Enforce edge-triggering for legacy XR inputs
+		if (anyLegacyButtonDown && !prevLegacyButtonPressed)
 		{
+			buttonPressed = true;
+		}
+		prevLegacyButtonPressed = anyLegacyButtonDown;
+
+		// Only trigger restart if the grace period has elapsed AND a discrete button press occurred
+		if (timer >= minDisplayTime && buttonPressed)
+		{
+			// Purge unused memory and assets from the previous run to prevent GC hitches upon restarting
+			System.GC.Collect();
+			Resources.UnloadUnusedAssets();
+
 			// Reset back to start of the experience
 			SceneManager.LoadScene(0);
 		}

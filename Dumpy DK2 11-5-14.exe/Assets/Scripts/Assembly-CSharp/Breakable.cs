@@ -11,10 +11,18 @@ public class Breakable : MonoBehaviour
 
 	private void Awake()
 	{
-		if (!GetComponent<Rigidbody>())
+		Rigidbody rb = GetComponent<Rigidbody>();
+		if (rb == null)
 		{
-			gameObject.AddComponent<Rigidbody>();
+			rb = gameObject.AddComponent<Rigidbody>();
 		}
+		// Non-convex MeshColliders with non-kinematic Rigidbodies violate PhysX rules since Unity 5
+		MeshCollider mc = GetComponent<MeshCollider>();
+		if (mc != null && !mc.convex)
+		{
+			rb.isKinematic = true;
+		}
+
 		GameObject soundContainer = GameObject.Find("SoundContainer");
 		if (soundContainer != null)
 		{
@@ -35,6 +43,16 @@ public class Breakable : MonoBehaviour
 			{
 				GameObject gameObject = Instantiate(brokenObj, transform.position, transform.rotation) as GameObject;
 				gameObject.transform.localScale = transform.localScale;
+
+				// Ensure all dynamic pieces have convex mesh colliders
+				foreach (MeshCollider mc in gameObject.GetComponentsInChildren<MeshCollider>(true))
+				{
+					if (mc != null && mc.GetComponent<Rigidbody>() != null)
+					{
+						mc.convex = true;
+					}
+				}
+
 				if (particle != null)
 				{
 					GameObject p = Instantiate(particle, transform.position, transform.rotation) as GameObject;

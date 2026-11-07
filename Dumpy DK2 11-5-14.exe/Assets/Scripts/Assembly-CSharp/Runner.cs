@@ -104,19 +104,45 @@ public class Runner : Actor
 		{
 			if (brokenObj != null)
 			{
-				Instantiate(brokenObj, transform.position, transform.rotation);
+				GameObject broken = Instantiate(brokenObj, transform.position, transform.rotation) as GameObject;
+				if (broken != null)
+				{
+					broken.transform.localScale = transform.localScale;
+					foreach (MeshCollider mc in broken.GetComponentsInChildren<MeshCollider>(true))
+					{
+						if (mc != null && mc.GetComponent<Rigidbody>() != null)
+						{
+							mc.convex = true;
+						}
+					}
+				}
 			}
 			Destroy(gameObject);
+		}
+	}
+
+	private bool HasParameter(string paramName)
+	{
+		if (ani == null || ani.runtimeAnimatorController == null) return false;
+		foreach (AnimatorControllerParameter param in ani.parameters)
+		{
+			if (param.name == paramName) return true;
+		}
+		return false;
+	}
+
+	private void SetAniBoolSafe(string paramName, bool value)
+	{
+		if (HasParameter(paramName))
+		{
+			ani.SetBool(paramName, value);
 		}
 	}
 
 	private void StartMove()
 	{
 		moving = true;
-		if (ani != null)
-		{
-			ani.SetBool("Run", true);
-		}
+		SetAniBoolSafe("Run", true);
 		if (runParticle != null)
 		{
 			runP = Instantiate(runParticle, transform.position, Quaternion.identity) as GameObject;
@@ -132,10 +158,7 @@ public class Runner : Actor
 	private void StopMove()
 	{
 		moving = false;
-		if (ani != null)
-		{
-			ani.SetBool("Run", false);
-		}
+		SetAniBoolSafe("Run", false);
 		if (runP != null)
 		{
 			Destroy(runP);
@@ -153,10 +176,7 @@ public class Runner : Actor
 	private void Hit()
 	{
 		hit = true;
-		if (ani != null)
-		{
-			ani.SetBool("Hit", true);
-		}
+		SetAniBoolSafe("Hit", true);
 		if (hitParticle != null)
 		{
 			hitP = Instantiate(hitParticle, transform.position, Quaternion.identity) as GameObject;

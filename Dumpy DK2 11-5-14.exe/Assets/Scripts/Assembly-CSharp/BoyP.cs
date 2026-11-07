@@ -30,11 +30,15 @@ public class BoyP : MonoBehaviour
 		color1 = new Color(1f, 1f, 1f, 1f);
 		color2 = new Color(1f, 1f, 1f, 0f);
 		NavMeshAgent agent = GetComponent<NavMeshAgent>();
-		if (agent != null && endPos != null)
+		if (agent != null)
 		{
-			if (agent.isOnNavMesh)
+			if (agent.isOnNavMesh && endPos != null)
 			{
 				agent.SetDestination(endPos.position);
+			}
+			else
+			{
+				agent.enabled = false;
 			}
 		}
 		ani = GetComponent<Animator>();
@@ -127,6 +131,8 @@ public class BoyP : MonoBehaviour
 		}
 		if (moveTime > timeToMove)
 		{
+			System.GC.Collect();
+			Resources.UnloadUnusedAssets();
 			SceneManager.LoadScene("Main_03");
 		}
 

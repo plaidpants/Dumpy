@@ -7,8 +7,7 @@ public class HighwayCarDelete : MonoBehaviour
 	{
 		if (collider != null && collider.gameObject != null)
 		{
-			NavMeshAgent component = collider.gameObject.GetComponent<NavMeshAgent>();
-			if (component != null)
+			if (collider.GetComponent<HighwayCar>() != null || collider.GetComponent<NavMeshAgent>() != null)
 			{
 				Destroy(collider.gameObject);
 			}

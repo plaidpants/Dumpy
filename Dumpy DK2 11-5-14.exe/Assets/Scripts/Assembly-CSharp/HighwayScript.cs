@@ -31,13 +31,22 @@ public class HighwayScript : MonoBehaviour
 		GameObject gameObject = Instantiate(vehiclePrefabs[num], position, rotation) as GameObject;
 		gameObject.layer = LayerMask.NameToLayer("HighwayCar");
 		gameObject.transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
-		NavMeshAgent agent = gameObject.AddComponent<NavMeshAgent>();
+
+		bool hasNavMesh = NavMesh.SamplePosition(position, out _, 2f, NavMesh.AllAreas);
+		if (hasNavMesh)
+		{
+			NavMeshAgent agent = gameObject.AddComponent<NavMeshAgent>();
+			if (agent != null && agent.isOnNavMesh)
+			{
+				agent.destination = highwayNodes[0].position;
+				agent.speed = 150f;
+				agent.angularSpeed = 500f;
+				agent.acceleration = 300f;
+				agent.height = 2f;
+			}
+		}
+
 		gameObject.AddComponent<PushCar>();
-		agent.destination = highwayNodes[0].position;
-		agent.speed = 150f;
-		agent.angularSpeed = 500f;
-		agent.acceleration = 300f;
-		agent.height = 2f;
 		HighwayCar car = gameObject.AddComponent<HighwayCar>();
 		car.highWayNodes = highwayNodes;
 		car.currentNode = highwayNodes[0].gameObject;

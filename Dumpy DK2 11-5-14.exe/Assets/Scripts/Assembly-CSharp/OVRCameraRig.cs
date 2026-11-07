@@ -18,23 +18,43 @@ public class OVRCameraRig : MonoBehaviour
 
 	private void Awake()
 	{
+		SanitizePhysicsColliders();
 		EnsureGameObjectIntegrity();
 	}
 
 	private void Start()
 	{
+		SanitizePhysicsColliders();
 		EnsureGameObjectIntegrity();
 		StartXRIfAvailable();
 		EnsureTrunk();
 		EnsureAndroidAudioFocus();
 	}
 
+	private void SanitizePhysicsColliders()
+	{
+		if (!Application.isPlaying) return;
+		MeshCollider[] allMeshColliders = Object.FindObjectsOfType<MeshCollider>();
+		foreach (MeshCollider mc in allMeshColliders)
+		{
+			if (mc != null && !mc.convex)
+			{
+				Rigidbody rb = mc.GetComponent<Rigidbody>();
+				if (rb != null && !rb.isKinematic)
+				{
+					rb.isKinematic = true;
+				}
+			}
+		}
+	}
+
 	private void EnsureAndroidAudioFocus()
 	{
 		if (!Application.isPlaying) return;
-		if (GetComponent<AndroidAudioFocusRequester>() == null && Object.FindObjectOfType<AndroidAudioFocusRequester>() == null)
+		if (Object.FindObjectOfType<AndroidAudioFocusRequester>() == null)
 		{
-			gameObject.AddComponent<AndroidAudioFocusRequester>();
+			GameObject go = new GameObject("AndroidAudioFocusRequester");
+			go.AddComponent<AndroidAudioFocusRequester>();
 		}
 	}
 
@@ -45,16 +65,6 @@ public class OVRCameraRig : MonoBehaviour
 		{
 			gameObject.AddComponent<DumpyTrunk>();
 		}
-	}
-
-	private void OnDestroy()
-	{
-		StopXR();
-	}
-
-	private void OnDisable()
-	{
-		StopXR();
 	}
 
 	private void OnApplicationQuit()
@@ -106,8 +116,11 @@ public class OVRCameraRig : MonoBehaviour
 
 	private void LateUpdate()
 	{
-		EnsureGameObjectIntegrity();
-		if (Application.isPlaying)
+		if (!Application.isPlaying)
+		{
+			EnsureGameObjectIntegrity();
+		}
+		else
 		{
 			UpdateAnchors();
 		}
@@ -231,23 +244,25 @@ public class OVRCameraRig : MonoBehaviour
 			rightCam.enabled = false;
 		}
 
-		// Ensure AudioListener is on center eye anchor
-		if (centerEyeAnchor.GetComponent<AudioListener>() == null)
+		// Ensure only center eye anchor has an active AudioListener
+		AudioListener centerListener = centerEyeAnchor.GetComponent<AudioListener>();
+		if (centerListener == null)
 		{
-			centerEyeAnchor.gameObject.AddComponent<AudioListener>();
+			centerListener = centerEyeAnchor.gameObject.AddComponent<AudioListener>();
 		}
+		centerListener.enabled = true;
 
-		if (Application.isPlaying)
+		// Disable and cleanup any other AudioListeners across the scene immediately
+		AudioListener[] allListeners = Object.FindObjectsOfType<AudioListener>();
+		foreach (AudioListener al in allListeners)
 		{
-			if (leftEyeAnchor != null)
+			if (al != centerListener)
 			{
-				AudioListener al = leftEyeAnchor.GetComponent<AudioListener>();
-				if (al != null) Destroy(al);
-			}
-			if (rightEyeAnchor != null)
-			{
-				AudioListener al = rightEyeAnchor.GetComponent<AudioListener>();
-				if (al != null) Destroy(al);
+				al.enabled = false;
+				if (Application.isPlaying)
+				{
+					Destroy(al);
+				}
 			}
 		}
 	}

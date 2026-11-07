@@ -1,7 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(Animator))]
 public abstract class Actor : MonoBehaviour
 {
 	public string triggerName;

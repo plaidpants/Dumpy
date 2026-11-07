@@ -28,10 +28,24 @@ public class PushCar : MonoBehaviour
 
 	private void OnCollisionEnter(Collision otherObject)
 	{
-		if (navMeshAgent != null && otherObject.gameObject.layer != LayerMask.NameToLayer("Ground") && !hit)
+		if (otherObject.gameObject.layer != LayerMask.NameToLayer("Ground") && !hit)
 		{
-			navMeshAgent.isStopped = true;
-			Destroy(navMeshAgent);
+			if (navMeshAgent != null)
+			{
+				if (navMeshAgent.isOnNavMesh)
+				{
+					navMeshAgent.isStopped = true;
+				}
+				Destroy(navMeshAgent);
+			}
+
+			// Disable highway autopilot so dynamic physics takes over
+			HighwayCar hc = GetComponent<HighwayCar>();
+			if (hc != null)
+			{
+				Destroy(hc);
+			}
+
 			Vector3 velocity = (otherObject.collider != null && otherObject.collider.attachedRigidbody != null) 
 				? otherObject.collider.attachedRigidbody.velocity 
 				: Vector3.zero;
